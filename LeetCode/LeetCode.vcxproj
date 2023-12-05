@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arr101.cpp" />
     <ClCompile Include="LeetCode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arr101.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

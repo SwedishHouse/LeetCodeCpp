@@ -2,10 +2,19 @@
 //
 
 #include <iostream>
+#include "Arr101.h"
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    vector<int> nums = { 1,1,0,1,1,1 };
+    for (int i = 0; i < nums.size(); i++) {
+        std::cout << nums[i] << ",";
+    }
+    std::cout << "\n\r";
+    Arr101 arr = Arr101();
+    std::cout << "Result: " << arr.findMaxConsecutiveOnes(nums);
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
