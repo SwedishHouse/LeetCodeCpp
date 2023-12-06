@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "yandex_algorith_lesson_0.h"
+#include <sstream>
 
 int main()
 {
@@ -10,6 +11,16 @@ int main()
     std::string s;
     std::getline(std::cin, s);
     yandex_algorith_lesson_0::print_most_common_symbol(s);
+    std::cout << "Enter array:";
+    std::getline(std::cin, s);
+    std::istringstream iss(s);
+    int num;
+    std::vector<int> numbers;
+
+    while (iss >> num) {
+        numbers.push_back(num);
+    }
+    std::cout << "Max number = " << yandex_algorith_lesson_0::maximum_of_consequnce(numbers) << std::endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

@@ -20,10 +20,23 @@ void yandex_algorith_lesson_0::print_most_common_symbol(std::string s)
 	}
 	if (ans)
 	{
-		std::cout << "Symbol is: " << ans << " mets " << answers[ans] << "times\n";
+		std::cout << "Symbol is: " << ans << " met " << answers[ans] << "times\n";
 	}
 	else
 	{
 		std::cout << "Empty string\n";
 	}
+}
+
+int yandex_algorith_lesson_0::maximum_of_consequnce(std::vector<int>& v)
+{
+	if (!v.size())
+		return -1;
+	int maximum = 0;
+	for (int i = 0; i < v.size(); i++)
+	{
+		if (v[i] > maximum)
+			maximum = v[i];
+	}
+	return maximum;
 }
