@@ -10,8 +10,7 @@ int Arr101::findMaxConsecutiveOnes(vector<int>& nums) {
         {
             if (nums[j])
             {
-                counter++;
-                
+                counter++;  
             }
             else
             {
