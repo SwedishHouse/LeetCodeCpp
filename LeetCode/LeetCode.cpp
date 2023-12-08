@@ -3,17 +3,22 @@
 
 #include <iostream>
 #include "Arr101.h"
-
+#include "leet_code_75.h"
 
 int main()
 {
-    vector<int> nums = { 1,1,0,1,1,1 };
+    
+   /* vector<int> nums = { 1,1,0,1,1,1 };
     for (int i = 0; i < nums.size(); i++) {
         std::cout << nums[i] << ",";
     }
     std::cout << "\n\r";
     Arr101 arr = Arr101();
-    std::cout << "Result: " << arr.findMaxConsecutiveOnes(nums);
+    std::cout << "Result: " << arr.findMaxConsecutiveOnes(nums);*/
+    leet_code_75 s = leet_code_75();
+    string a = "ab";
+    string b = "pqrs";
+    cout << s.mergeAlternately(a, b);
 
 }
 

@@ -24,9 +24,15 @@
     <ClCompile Include="Arr101.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="leet_code_75.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arr101.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="leet_code_75.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
