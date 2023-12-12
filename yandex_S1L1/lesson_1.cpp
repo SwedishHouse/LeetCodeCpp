@@ -18,3 +18,21 @@ string lesson_1::rle_min(const std::string& s)
 	return result;
 }
 
+string lesson_1::rle(const std::string& s)
+{
+	string result;
+	char current = s[0];
+	unsigned int index = 0;
+	for (int i(0); i < s.length(); i++)
+	{
+		if (s[i] != current)
+		{
+			result.push_back(s[i]);
+			result.append(std::to_string(i - index));
+			current = s[i];
+			index = i;
+		}
+	}
+	return result;
+}
+

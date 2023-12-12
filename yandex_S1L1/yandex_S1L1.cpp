@@ -10,7 +10,10 @@ int main()
     std::string data = "aaabbcdefgsssss";
     lesson_1 l = lesson_1();
     string res = l.rle_min(data);
-    cout << res;
+
+    cout << res <<std::endl;
+    res = l.rle(data);
+    cout << res << std::endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
