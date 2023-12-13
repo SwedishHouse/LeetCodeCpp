@@ -28,7 +28,8 @@ string lesson_1::rle(const std::string& s)
 		if (s[i] != current)
 		{
 			result.push_back(s[i]);
-			result.append(std::to_string(i - index));
+			if(i - index > 1)
+				result.append(std::to_string(i - index));
 			current = s[i];
 			index = i;
 		}
