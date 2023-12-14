@@ -15,6 +15,10 @@ int main()
     std::cout << "\n\r";
     Arr101 arr = Arr101();
     std::cout << "Result: " << arr.findMaxConsecutiveOnes(nums);
+
+    nums = { 12,345,2,6,7896 };
+    std::cout << "Result 2: " << arr.findNumbers(nums);
+
     /*leet_code_75 s = leet_code_75();
     string a = "ab";
     //string b = "pqrs";
