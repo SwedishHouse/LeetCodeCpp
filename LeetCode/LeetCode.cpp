@@ -14,10 +14,21 @@ int main()
     }
     std::cout << "\n\r";
     Arr101 arr = Arr101();
-    std::cout << "Result: " << arr.findMaxConsecutiveOnes(nums);
+    std::cout << "Result: " << arr.findMaxConsecutiveOnes(nums) << endl;
 
     nums = { 12,345,2,6,7896 };
-    std::cout << "Result 2: " << arr.findNumbers(nums);
+    std::cout << "Result 2: " << arr.findNumbers(nums) << endl;
+
+    nums = { -7,-3,2,3,11 };
+    vector<int> res = arr.sortedSquares(nums);
+    for (const int &val : res)
+        std::cout << "Result 3: " << val << endl;
+
+    nums = { 1,0,2,3,0,4,5,0 };
+    arr.duplicateZeros(nums);
+    std::cout << "duplicateZeros: " << endl;
+    for (const int& val : nums)
+        std::cout << "Result 3: " << val << endl;
 
     /*leet_code_75 s = leet_code_75();
     string a = "ab";

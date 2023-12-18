@@ -30,3 +30,43 @@ int Arr101::findNumbers(vector<int>& nums) {
     }
     return result;
 }
+
+vector<int> Arr101::sortedSquares(vector<int>& nums)
+{
+    int l = 0, r = nums.size() - 1;
+    int p = r;
+    vector<int> result(nums.size());
+    while(p >  -1)
+    {
+        if (abs(nums[l]) > abs(nums[r]))
+        {
+            result[p--] = nums[l] * nums[l];
+            l++;
+        }
+        else
+        {
+            result[p--] = nums[r] * nums[r];
+            r--;
+        }
+    }
+    return result;
+}
+
+void Arr101::duplicateZeros(vector<int>& arr) {
+    unsigned int counter = 0, replacer = 0;
+    while (counter < arr.size())
+    {
+        if (arr[counter] == 0) {
+            replacer = arr.size() - 2;
+
+            while (replacer > counter)
+            {
+                arr[replacer + 1] = arr[replacer];
+                replacer--;
+            }
+            arr[replacer + 1] = 0;
+            counter++;
+        }
+        counter++;
+    }
+}
