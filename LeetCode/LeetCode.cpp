@@ -30,6 +30,13 @@ int main()
     for (const int& val : nums)
         std::cout << "Result 3: " << val << endl;
 
+    vector<int> n1 = { 1,2,3,0,0,0 };
+    vector<int> n2 = { 2,5,6 };
+    arr.merge(n1, 3, n2, 3);
+    std::cout << "merge: " << endl;
+    for (const int& val : n1)
+        std::cout << "Result 4: " << val << endl;
+
     /*leet_code_75 s = leet_code_75();
     string a = "ab";
     //string b = "pqrs";

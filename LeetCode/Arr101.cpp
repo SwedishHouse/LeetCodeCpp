@@ -70,3 +70,23 @@ void Arr101::duplicateZeros(vector<int>& arr) {
         counter++;
     }
 }
+
+void Arr101::merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
+{
+    int counter = m + n - 1, i = m - 1, j = n - 1;
+    while (j >= 0)
+    {
+        if (i >=0 && nums1[i] > nums2[j])
+        {
+            nums1[counter] = nums1[i];
+            i--;
+        }
+        else
+        {
+            nums1[counter] = nums2[j];
+            j--;
+        }
+        
+        counter--;
+    }
+}
