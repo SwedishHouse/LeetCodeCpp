@@ -90,3 +90,29 @@ void Arr101::merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
         counter--;
     }
 }
+
+int Arr101::removeElement(vector<int>& nums, int val)
+{
+    if (!nums.size())
+        return 0;
+    int counter = nums.size(), l = 0, r = nums.size() ? nums.size() - 1: 0;
+    while (l <= r)
+    {
+        if (nums[l] == val && nums[r] != val)
+        {
+            nums[l] = nums[r];
+            l++;
+            r--;
+            counter--;
+        }
+        else if(nums[l] == val && nums[r] == val)
+        {
+            r--;
+            counter--;
+        }
+        else
+            l++;
+
+    }
+    return counter;
+}

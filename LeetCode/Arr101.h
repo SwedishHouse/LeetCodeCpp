@@ -11,5 +11,6 @@ public:
     static vector<int> sortedSquares(vector<int>& nums);
     static void duplicateZeros(vector<int>& arr);
     static void merge(vector<int>& nums1, int m, vector<int>& nums2, int n);
+    static int removeElement(vector<int>& nums, int val);
 };
 

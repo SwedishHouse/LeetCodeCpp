@@ -7,13 +7,14 @@
 
 int main()
 {
-    
+    Arr101 arr = Arr101();
+    /*
     vector<int> nums = { 0,1,0,1,0,1, 1, 0 };
     for (int i = 0; i < nums.size(); i++) {
         std::cout << nums[i] << ",";
     }
     std::cout << "\n\r";
-    Arr101 arr = Arr101();
+    
     std::cout << "Result: " << arr.findMaxConsecutiveOnes(nums) << endl;
 
     nums = { 12,345,2,6,7896 };
@@ -37,11 +38,16 @@ int main()
     for (const int& val : n1)
         std::cout << "Result 4: " << val << endl;
 
-    /*leet_code_75 s = leet_code_75();
+    leet_code_75 s = leet_code_75();
     string a = "ab";
     //string b = "pqrs";
-    cout << s.mergeAlternately(a, b);*/
+    cout << s.mergeAlternately(a, b);
 
+    */
+    vector<int> nums = { 0,1,2,2,3,0,4,2 };
+    int len = arr.removeElement(nums, 2);
+    for(int i(0); i < len; i++)
+        std::cout << "Result: " << nums[i] << endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
