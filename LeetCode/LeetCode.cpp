@@ -44,9 +44,14 @@ int main()
     cout << s.mergeAlternately(a, b);
 
     */
-    vector<int> nums = { 0,1,2,2,3,0,4,2 };
-    int len = arr.removeElement(nums, 2);
-    for(int i(0); i < len; i++)
+    //vector<int> nums = { 0,0,1,1,1,2,2,3,3,4 };
+    //int len = arr.removeElement(nums, 2);
+    //for(int i(0); i < len; i++)
+    //    std::cout << "Result: " << nums[i] << endl;
+
+    vector<int> nums = { 1,1,2 };
+    int k = arr.removeDuplicates(nums);
+    for(int i(0); i < k; i++)
         std::cout << "Result: " << nums[i] << endl;
 }
 

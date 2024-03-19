@@ -116,3 +116,32 @@ int Arr101::removeElement(vector<int>& nums, int val)
     }
     return counter;
 }
+
+int Arr101::removeDuplicates(vector<int>& nums)
+{
+    if (nums.size() <= 1)
+        return nums.size();
+    int left = 0, right = nums.size() ? nums.size() - 1: 0, i = 0;
+
+    while (left < right)
+    {
+        while (right > 0 && nums[right] == nums[right - 1])
+        {
+            right--;
+        }
+        if (nums[left] == nums[left + 1])
+        {
+            i = left + 1;
+            while (i < right)
+            {
+                nums[i] = nums[i + 1];
+                i++;
+            }
+            right--;
+        }
+        else
+            left++;
+
+    }
+    return right > 0 ? right + 1: left - right;
+}
