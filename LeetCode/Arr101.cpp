@@ -1,5 +1,5 @@
 #include "Arr101.h"
-
+#include <map>
 int Arr101::findMaxConsecutiveOnes(vector<int>& nums) {
     unsigned int len = 0, res = 0;
     for (int i = 0; i < nums.size(); i++)
@@ -144,4 +144,18 @@ int Arr101::removeDuplicates(vector<int>& nums)
 
     }
     return right > 0 ? right + 1: left - right;
+}
+
+bool Arr101::checkIfExist(vector<int>& arr)
+{
+
+    for (int i = 0; i < arr.size(); i++)
+    {
+        for (int j = 0; j < arr.size(); j++)
+        {
+            if (i != j && arr[i] == arr[j] * 2)
+                return true;
+        }
+    }
+    return false;
 }
