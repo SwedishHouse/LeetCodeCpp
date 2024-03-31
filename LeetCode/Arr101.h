@@ -14,5 +14,7 @@ public:
     static int removeElement(vector<int>& nums, int val);
     static int removeDuplicates(vector<int>& nums);
     static bool checkIfExist(vector<int>& arr);
+    static bool validMountainArray(vector<int>& arr);
+    static vector<int> replaceElements(vector<int>& arr);
 };
 
