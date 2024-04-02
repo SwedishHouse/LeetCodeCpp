@@ -1,5 +1,5 @@
 #include "Arr101.h"
-
+#include <map>
 int Arr101::findMaxConsecutiveOnes(vector<int>& nums) {
     unsigned int len = 0, res = 0;
     for (int i = 0; i < nums.size(); i++)
@@ -144,6 +144,66 @@ int Arr101::removeDuplicates(vector<int>& nums)
 
     }
     return right > 0 ? right + 1: left - right;
+}
+
+bool Arr101::checkIfExist(vector<int>& arr)
+{
+
+    for (int i = 0; i < arr.size(); i++)
+    {
+        for (int j = 0; j < arr.size(); j++)
+        {
+            if (i != j && arr[i] == arr[j] * 2)
+                return true;
+        }
+    }
+    return false;
+}
+
+bool Arr101::validMountainArray(vector<int>& arr) {
+    unsigned int i = 0;
+    bool is_raise = false, is_down = false;
+    while (i < arr.size() - 1)
+    {
+        if (arr[i] < arr[i + 1])
+            i++;
+        else
+        {
+            //is_raise = false;
+            break;
+        }
+        is_raise = true;
+    }
+    
+    while(is_raise && i < arr.size() - 1)
+    {
+        if (arr[i] > arr[i + 1])
+            i++;
+        else
+        {
+            is_down = false;
+            break;
+        }
+        is_down = true;
+    }
+    return is_raise && is_down;
+}
+
+vector<int> Arr101::replaceElements(vector<int>& arr)
+{
+    int max_value = 0;
+    for (int i = 0; i < arr.size(); i++)
+    {
+        for (int j = i + 1; j < arr.size(); j++)
+        {
+            if (max_value < arr[j])
+                max_value = arr[j];
+        }
+        arr[i] = max_value;
+        max_value = 0;
+    }
+    arr[arr.size() - 1] = -1;
+    return arr;
 }
 
 void Arr101::moveZeroes(vector<int>& nums)

@@ -49,6 +49,18 @@ int main()
     //for(int i(0); i < len; i++)
     //    std::cout << "Result: " << nums[i] << endl;
 
+    //vector<int> nums = { 1,1,2 };
+    //int k = arr.removeDuplicates(nums);
+    //for(int i(0); i < k; i++)
+    //    std::cout << "Result: " << nums[i] << endl;
+
+    /*vector<int> nums = { 0,1,2,1,2 };
+    std::cout << "Result: " << arr.validMountainArray(nums) << endl;
+    */
+
+    /*vector<int> nums = { 17, 18, 5, 4, 6, 1 };
+    arr.replaceElements(nums);*/
+    
     /*vector<int> nums = { 1,1,2 };
     int k = arr.removeDuplicates(nums);
     for(int i(0); i < k; i++)
