@@ -49,9 +49,13 @@ int main()
     //for(int i(0); i < len; i++)
     //    std::cout << "Result: " << nums[i] << endl;
 
-    vector<int> nums = { 1,1,2 };
+    /*vector<int> nums = { 1,1,2 };
     int k = arr.removeDuplicates(nums);
     for(int i(0); i < k; i++)
+        std::cout << "Result: " << nums[i] << endl;*/
+    vector<int> nums = { 0,1,0,3,12 };
+    arr.moveZeroes(nums);
+    for (int i(0); i < nums.size(); i++)
         std::cout << "Result: " << nums[i] << endl;
 }
 

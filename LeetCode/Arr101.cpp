@@ -145,3 +145,25 @@ int Arr101::removeDuplicates(vector<int>& nums)
     }
     return right > 0 ? right + 1: left - right;
 }
+
+void Arr101::moveZeroes(vector<int>& nums)
+{
+    unsigned int left = 0, right = 0;
+    while (left < nums.size())
+    {
+        while(left < nums.size() && nums[left])
+        {
+            left++;
+        }
+        right = left;
+        while (right < nums.size() && nums[right]==0)
+        {
+            right++;
+        }
+        nums[left] = nums[right];
+        nums[right] = 0;
+        left++;
+    }
+}
+
+
