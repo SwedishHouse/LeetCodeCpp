@@ -189,19 +189,26 @@ bool Arr101::validMountainArray(vector<int>& arr) {
     return is_raise && is_down;
 }
 
-vector<int> Arr101::replaceElements(vector<int>& arr)
+void Arr101::moveZeroes(vector<int>& nums)
 {
-    int max_value = 0;
-    for (int i = 0; i < arr.size(); i++)
+    unsigned int r = 0, l= 0;
+    while (l < nums.size())
     {
-        for (int j = i + 1; j < arr.size(); j++)
+        while (l < nums.size() && nums[l] )
         {
-            if (max_value < arr[j])
-                max_value = arr[j];
+            l++;
         }
-        arr[i] = max_value;
-        max_value = 0;
+        r = l;
+        while (r < nums.size() &&!nums[r])
+        {
+            r++;
+        }
+        if (r < nums.size())
+        {
+            nums[l] = nums[r];
+            nums[r] = 0;
+        }
+        
+        l++;
     }
-    arr[arr.size() - 1] = -1;
-    return arr;
 }

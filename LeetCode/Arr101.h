@@ -16,5 +16,6 @@ public:
     static bool checkIfExist(vector<int>& arr);
     static bool validMountainArray(vector<int>& arr);
     static vector<int> replaceElements(vector<int>& arr);
+    static void moveZeroes(vector<int>& nums);
 };
 
