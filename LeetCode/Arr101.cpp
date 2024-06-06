@@ -189,29 +189,6 @@ bool Arr101::validMountainArray(vector<int>& arr) {
     return is_raise && is_down;
 }
 
-void Arr101::moveZeroes(vector<int>& nums)
-{
-    unsigned int r = 0, l= 0;
-    while (l < nums.size())
-    {
-        while (l < nums.size() && nums[l] )
-        {
-            l++;
-        }
-        r = l;
-        while (r < nums.size() &&!nums[r])
-        {
-            r++;
-        }
-        if (r < nums.size())
-        {
-            nums[l] = nums[r];
-            nums[r] = 0;
-        }
-        
-        l++;
-    }
-}
 
 void Arr101::moveZeroes(vector<int>& nums)
 {
@@ -232,5 +209,4 @@ void Arr101::moveZeroes(vector<int>& nums)
         left++;
     }
 }
-
 
