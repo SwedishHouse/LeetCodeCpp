@@ -65,6 +65,14 @@ int main()
     for(int i(0); i < nums.size(); i++)
         std::cout << "Result: " << nums[i] << endl;
     
+    /*vector<int> nums = { 1,1,2 };
+    int k = arr.removeDuplicates(nums);
+    for(int i(0); i < k; i++)
+        std::cout << "Result: " << nums[i] << endl;*/
+    vector<int> nums = { 0,1,0,3,12 };
+    arr.moveZeroes(nums);
+    for (int i(0); i < nums.size(); i++)
+        std::cout << "Result: " << nums[i] << endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
